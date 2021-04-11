@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Currency Tracker</title>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="/css/style.css" />
+
+		<link rel="manifest" href="manifest.json" />
+	</head>
+	<body>
+		<h1 class="ui center aligned header">Current Currencies</h1>
+
+		<div class="ui centered card">
+			<div class="ui center aligned">
+				<i class="fas fa-dollar-sign fa-8x"></i>
+				<div class="content">
+					<p id="dollar-value"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui centered card">
+			<div class="ui center aligned">
+				<i class="fas fa-euro-sign fa-8x"></i>
+				<div class="content">
+					<p id="euro-value"></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui centered card">
+			<div class="ui center aligned">
+				<i class="fas fa-pound-sign fa-8x"></i>
+				<div class="content">
+					<p id="pound-value"></p>
+				</div>
+			</div>
+		</div>
+
+		<h3 class="ui center aligned header">Developed by Ztan</h3>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>

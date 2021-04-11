@@ -1,0 +1,24 @@
+{
+  "name": "currency-tracker-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztancankiri/currency-tracker-pwa.git"
+  },
+  "author": "Zafer Tan Cankiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztancankiri/currency-tracker-pwa/issues"
+  },
+  "homepage": "https://github.com/ztancankiri/currency-tracker-pwa#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
+    "express": "^4.17.1"
+  }
+}
