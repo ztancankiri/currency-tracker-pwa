@@ -59,6 +59,10 @@ async function getBloombergData() {
         let eur = (eurArr[0] + eurArr[1]) / 2;
         let gbp = (gbpArr[0] + gbpArr[1]) / 2;
 
+        usd = usd.toFixed(4);
+        eur = eur.toFixed(4);
+        gbp = gbp.toFixed(4);
+
         return { usd, eur, gbp };
     }
     catch (error) {
@@ -74,6 +78,8 @@ async function getCardanoData() {
         let $ = cheerio.load(response.data);
 
         let ada = parseFloat($('div[class="CRTL_price_box"]').find('span[data-code="ADAUSDT"][data-type="last"]').text());
+
+        ada = ada.toFixed(4);
 
         return { ada };
     }

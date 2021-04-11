@@ -20,46 +20,68 @@
 		<link rel="manifest" href="manifest.json" />
 	</head>
 	<body>
-		<h1 class="ui center aligned header">Current Currencies</h1>
-
-		<div class="ui centered card">
-			<div class="ui center aligned">
-				<i class="fas fa-dollar-sign fa-8x"></i>
-				<div class="content">
-					<p id="dollar-value"></p>
-				</div>
-			</div>
+		<div class="ui active dimmer">
+			<div class="ui massive text loader">Loading</div>
 		</div>
 
-		<div class="ui centered card">
-			<div class="ui center aligned">
-				<i class="fas fa-euro-sign fa-8x"></i>
-				<div class="content">
-					<p id="euro-value"></p>
+		<div id="main">
+			<img class="ui centered image img-logo" src="images/logo_144.png" />
+
+			<h1 class="ui center aligned header">Currency Tracker</h1>
+
+			<div class="ui grid">
+				<div class="ui centered row">
+					<div class="two wide column"></div>
+					<div class="six wide column">
+						<div class="ui centered card">
+							<div class="ui center aligned">
+								<i class="fas fa-dollar-sign fa-8x"></i>
+								<div class="content">
+									<p id="dollar-value"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="six wide column">
+						<div class="ui centered card">
+							<div class="ui center aligned">
+								<i class="fas fa-euro-sign fa-8x"></i>
+								<div class="content">
+									<p id="euro-value"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="two wide column"></div>
+				</div>
+				<div class="ui centered row">
+					<div class="two wide column"></div>
+					<div class="six wide column">
+						<div class="ui centered card">
+							<div class="ui center aligned">
+								<i class="fas fa-pound-sign fa-8x"></i>
+								<div class="content">
+									<p id="pound-value"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="six wide column">
+						<div class="ui centered card">
+							<div class="ui center aligned">
+								<img class="img-logo" src="images/cardano.png" />
+								<div class="content">
+									<p id="cardano-value"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="two wide column"></div>
 				</div>
 			</div>
+
+			<h3 class="ui center aligned header">Developed by Ztan</h3>
 		</div>
-
-		<div class="ui centered card">
-			<div class="ui center aligned">
-				<i class="fas fa-pound-sign fa-8x"></i>
-				<div class="content">
-					<p id="pound-value"></p>
-				</div>
-			</div>
-		</div>
-
-		<div class="ui centered card">
-			<div class="ui center aligned">
-				<img class="img-logo" src="images/cardano.png" />
-				<div class="content">
-					<p id="cardano-value"></p>
-				</div>
-			</div>
-		</div>
-
-		<h3 class="ui center aligned header">Developed by Ztan</h3>
-
 		<script src="js/app.js"></script>
 	</body>
 </html>

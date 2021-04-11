@@ -1,4 +1,6 @@
 $(document).ready(async () => {
+    $('#main').hide();
+
     let response = await axios.get('/currency');
     let data = response.data;
     $('#dollar-value').text(data.usd);
@@ -7,4 +9,8 @@ $(document).ready(async () => {
     $('#cardano-value').text(data.ada);
 
     console.log(data);
+
+    $('#main').show();
+    $('.dimmer').removeClass('active');
+    $('.dimmer').addClass('disabled');
 });
