@@ -2,9 +2,10 @@ const express = require('express');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const path = require('path');
-const port = 3000;
+const port = process.env.PORT || 4000;
 
 const BLOOMBERG_URL = 'https://www.bloomberght.com/doviz';
+const CARDANO_URL = 'https://piyasa.paratic.com/kripto-coin/cardano';
 
 const app = express();
 
@@ -17,6 +18,15 @@ app.get('/currency', async (req, res) => {
         res.status(404).send('Not found');
         return;
     }
+
+    const adaData = await getCardanoData();
+
+    if (adaData === null) {
+        res.status(404).send('Not found');
+        return;
+    }
+
+    data.ada = adaData.ada;
 
     res.send(data);
 });
@@ -50,6 +60,22 @@ async function getBloombergData() {
         let gbp = (gbpArr[0] + gbpArr[1]) / 2;
 
         return { usd, eur, gbp };
+    }
+    catch (error) {
+        console.log(error);
+    }
+
+    return null;
+}
+
+async function getCardanoData() {
+    try {
+        let response = await axios.get(CARDANO_URL);
+        let $ = cheerio.load(response.data);
+
+        let ada = parseFloat($('div[class="CRTL_price_box"]').find('span[data-code="ADAUSDT"][data-type="last"]').text());
+
+        return { ada };
     }
     catch (error) {
         console.log(error);
